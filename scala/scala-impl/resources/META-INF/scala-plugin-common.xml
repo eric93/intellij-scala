@@ -22,6 +22,7 @@
         <extensionPoint name="sdkResolver" interface="org.jetbrains.sbt.project.data.SdkResolver"/>
         <extensionPoint name="unresolvedReferenceFixProvider" interface="org.jetbrains.plugins.scala.annotator.UnresolvedReferenceFixProvider"/>
         <extensionPoint name="interpolatedStringMacroTypeProvider" interface="org.jetbrains.plugins.scala.lang.psi.impl.base.InterpolatedStringMacroTypeProvider"/>
+        <extensionPoint name="expansionMarkerProvider" interface="com.github.eric93.ExtensibleExpansionLineMarkerProvider"/>
     </extensionPoints>
 
     <extensions defaultExtensionNs="org.intellij.scala">
@@ -217,6 +218,7 @@
         <codeInsight.lineMarkerProvider language="Scala" implementationClass="org.jetbrains.plugins.scala.annotator.gutter.ScalaLineMarkerProvider"/>
         <codeInsight.lineMarkerProvider language="Scala" implementationClass="org.jetbrains.plugins.scala.worksheet.runconfiguration.WorksheetLineMarkerProvider"/>
         <codeInsight.lineMarkerProvider language="Scala" implementationClass="scala.meta.intellij.editor.MetaExpansionLineMarkerProvider"/>
+        <codeInsight.lineMarkerProvider language="Scala" implementationClass="com.github.eric93.ExtensibleExpansionLineMarkerProvider"/>
         <codeInsight.lineMarkerProvider language="Scala" implementationClass="org.jetbrains.plugins.scala.lang.macros.expansion.ReflectExpansionLineMarkerProvider"/>
         <codeInsight.lineMarkerProvider language="Scala" implementationClass="scala.macros.intellij.editor.Macros2ExpansionLineMarkerProvider"/>
         <codeInsight.gotoSuper language="Scala" implementationClass="org.jetbrains.plugins.scala.annotator.gutter.ScalaGoToSuperActionHandler"/>
